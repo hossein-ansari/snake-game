@@ -56,12 +56,11 @@ function moveSquares() {
       clearInterval(movePS);
     } else if (snakeCurent[0] - 10 < 0 && way === -10) {
       clearInterval(movePS);
-    } else if (squares[snakeCurent[0] + 1].classList.contains('snake')){
+    } else if (squares[snakeCurent[0] + way].classList.contains('snake')){
       clearInterval(movePS);
     }
   }, 1000);
 }
-
 function moveSnake(e) {
   switch (e.code) {
     case "KeyD":
